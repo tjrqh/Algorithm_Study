@@ -26,3 +26,42 @@
 
  <p>첫째 줄부터 N개의 줄에 오름차순으로 정렬한 결과를 한 줄에 하나씩 출력한다.</p>
 
+### 문제 풀이
+- sort 사용 방법
+  ``` Java
+    int a = Integer.parseInt(br.readLine());
+    int[] arr = new int[a];
+    for (int i = 0; i < a; i++) {
+      int b = Integer.parseInt(br.readLine());
+      arr[i] = b;
+    }
+    Arrays.sort(arr);
+
+    for (int j : arr) {
+      System.out.println(j);
+    }
+  }
+  ```
+- 버블소트 사용 방법
+  ```Java
+    int a = Integer.parseInt(br.readLine());
+    int cnt =1;
+
+    for(int i = 1; i < a; i++) {
+      int b = 0;
+      for(int j=i; j<a; j++){
+        if (b < a) {
+          b+= j;
+        }
+        else if(b == a) {
+          cnt+=1;
+          break;
+        }
+        else{
+          break;
+        }
+      }
+    }
+    System.out.println(cnt);
+  }
+```
