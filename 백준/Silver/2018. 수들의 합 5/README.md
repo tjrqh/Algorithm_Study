@@ -43,3 +43,27 @@
 <br>
 두번째로 코드를 구현 할 때 count값의 초기 값을 1로 줬다. 이것이 결과 값은 같아도 틀렸다고 했다.<br>
 결과적으로는 어떠한 값에서 cnt를 1로 줬을 때 값이 부정확해질 수 있다고 하여 cnt를 0으로 설정하고 자기자신도 포함하는 방법이 맞다고 한다.
+
+### 오답 코드
+``` Java
+    int a = Integer.parseInt(br.readLine());
+    int cnt =1;
+
+    for(int i = 1; i < a; i++) {
+      int b = 0;
+      for(int j=i; j<a; j++){
+        if (b < a) {
+          b+= j;
+        }
+        else if(b == a) {
+          cnt+=1;
+          break;
+        }
+        else{
+          break;
+        }
+      }
+    }
+    System.out.println(cnt);
+  }
+```
